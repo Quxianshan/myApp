@@ -1,0 +1,6 @@
+#ignore android project files or auto generate files
+.classpath
+.project
+bin/*
+gen/*
+!.gitignore
