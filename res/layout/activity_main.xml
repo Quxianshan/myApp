@@ -8,9 +8,34 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
+    <Button 
+        android:id="@+id/start_gsensor_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="@string/name_of_start_gsensor_activity"
+        />
 
+    <Button 
+        android:id="@+id/start_light_sensor_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/start_gsensor_activity"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="50dp"
+        android:text="@string/name_of_start_light_sensor_activity"
+        />
+    
+    <Button 
+        android:id="@+id/start_shell_command_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/start_light_sensor_activity"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="50dp"
+        android:text="@string/name_of_start_shell_command_activity"
+        />
 </RelativeLayout>

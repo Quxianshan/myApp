@@ -3,6 +3,19 @@
 
     <string name="app_name">TinyUtilApp</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-
+    <!-- start gsensor  -->
+    <string name="name_of_start_gsensor_activity">start gsensor activity</string>
+	<string name="button_name_of_change_delay_ui">delay ui</string>
+	<string name="button_name_of_change_delay_fastest">delay fastest</string>
+	<string name="button_name_of_change_delay_nomal">delay nomal</string>
+	<string name="button_name_of_change_delay_game">delay game</string>
+	
+	<!-- start light sensor -->
+	<string name="name_of_start_light_sensor_activity">start light sensor activity</string>
+	
+	<!-- start shell command -->
+	<string name="name_of_start_shell_command_activity">start shell command activity</string>
+	<string name="string_of_title">please input a shell command and exec it. </string>
+	<string name="hint_of_shell_command">input a shell command</string>
+	<string name="button_name_of_exec_shell">exec command</string>
 </resources>
