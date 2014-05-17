@@ -12,14 +12,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class StartLightSensorActivity extends Activity implements SensorEventListener{
+public class StartProximitySensorActivity extends Activity implements SensorEventListener{
 
-	private final static String TAG = "StartLightSensorActivity";
+	private final static String TAG = "StartProximityActivity";
 	private TextView generalInfo, accuracyInfo, value_0, value_1, value_2;
 	private Button delayFastest, delayGame, delayNormal, delayUi;
 	private int DELAY = SensorManager.SENSOR_DELAY_NORMAL;
 	private SensorManager sensorManager;
-	private Sensor lightSensor;
+	private Sensor proximitySensor;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,8 @@ public class StartLightSensorActivity extends Activity implements SensorEventLis
 		setContentView(R.layout.activity_start_sensors);
 		
 		initView();
-	} 
+	}
+	
 	private void initView() {
 		generalInfo = (TextView) findViewById(R.id.general_info);
 		accuracyInfo = (TextView) findViewById(R.id.accuracy_info);
@@ -46,41 +47,42 @@ public class StartLightSensorActivity extends Activity implements SensorEventLis
 		delayUi.setVisibility(View.GONE);
 		
 		sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-		lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
-		
-		if (null != lightSensor) {
+		proximitySensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+		if(null != proximitySensor) {
 			StringBuffer info = new StringBuffer();
-			info.append("Sensor name : " + lightSensor.getName() + "\n");
-			info.append("vendor : " + lightSensor.getVendor() + "\n");
+			info.append("Sensor name : " + proximitySensor.getName() + "\n");
+			info.append("vendor : " + proximitySensor.getVendor() + "\n");
 			generalInfo.setText(info.toString());
 		} else {
-			generalInfo.setText("no light sensor working now.");
+			generalInfo.setText("no proximity sensor working now.");
 		}
 	}
 	
 	@Override
 	protected void onPause() {
 		super.onPause();
-		sensorManager.unregisterListener(this, lightSensor);
+		sensorManager.unregisterListener(this, proximitySensor);
 	}
 	
 	@Override
 	protected void onResume() {
 		super.onResume();
-		sensorManager.registerListener(this, lightSensor, DELAY);
+		sensorManager.registerListener(this, proximitySensor, DELAY);
 	}
+	
 	@Override
 	public void onAccuracyChanged(Sensor sensor, int accuracy) {
 		// TODO Auto-generated method stub
-		if(sensor.getType() == Sensor.TYPE_LIGHT) {
-			Log.i(TAG, "light sensor onAccuracyChanged!");
+		if(sensor.getType() == Sensor.TYPE_PROXIMITY) {
+			Log.i(TAG, "proximity onAccuracyChanged!");
 			accuracyInfo.setText("Accuracy is :" + accuracy);
 		}
 	}
+
 	@Override
 	public void onSensorChanged(SensorEvent event) {
 		// TODO Auto-generated method stub
-		if(event.sensor.getType() == Sensor.TYPE_LIGHT) {
+		if(event.sensor.getType() == Sensor.TYPE_PROXIMITY) {
 			Log.i(TAG, "onSensorChanged ..");
 			float[] value = event.values;
 			value_0.setText("value[0] = " + value[0]);

@@ -11,8 +11,7 @@ public class MainActivity extends Activity {
 
 	private Button startGsensorActivity;
 	private Button startLightSensorActivity;
-	private Button startShellCommandActivity;
-	
+	private Button startProximityActivity;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -32,7 +31,7 @@ public class MainActivity extends Activity {
 	private void initView() {
 		startGsensorActivity = (Button) findViewById(R.id.start_gsensor_activity);
 		startLightSensorActivity = (Button) findViewById(R.id.start_light_sensor_activity);
-		startShellCommandActivity = (Button) findViewById(R.id.start_shell_command_activity);
+		startProximityActivity = (Button) findViewById(R.id.start_proximity_sensor_activity);
 	}
 	
 	private void setOnClickListener() {
@@ -56,12 +55,12 @@ public class MainActivity extends Activity {
 			}
 		});
 		
-		startShellCommandActivity.setOnClickListener(new View.OnClickListener() {
+		startProximityActivity.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent myIntent = new Intent(MainActivity.this, com.quinn.myutilapp.StartShellCommamdActivity.class);
+				Intent myIntent = new Intent(MainActivity.this, com.quinn.myutilapp.StartProximitySensorActivity.class);
 				startActivity(myIntent);
 			}
 		});

@@ -30,12 +30,13 @@
         />
     
     <Button 
-        android:id="@+id/start_shell_command_activity"
+        android:id="@+id/start_proximity_sensor_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/start_light_sensor_activity"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="50dp"
-        android:text="@string/name_of_start_shell_command_activity"
+        android:text="@string/name_of_start_proximity_sensor_activity"
         />
+    
 </RelativeLayout>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">TinyUtilApp</string>
+    <string name="app_name">MyApp</string>
     <string name="action_settings">Settings</string>
     <!-- start gsensor  -->
     <string name="name_of_start_gsensor_activity">start gsensor activity</string>
@@ -13,9 +13,7 @@
 	<!-- start light sensor -->
 	<string name="name_of_start_light_sensor_activity">start light sensor activity</string>
 	
-	<!-- start shell command -->
-	<string name="name_of_start_shell_command_activity">start shell command activity</string>
-	<string name="string_of_title">please input a shell command and exec it. </string>
-	<string name="hint_of_shell_command">input a shell command</string>
-	<string name="button_name_of_exec_shell">exec command</string>
+	<!-- start proximity sensor -->	
+	<string name="name_of_start_proximity_sensor_activity">start proximity sensor activity</string>
+	
 </resources>
