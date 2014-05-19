@@ -12,6 +12,7 @@ public class MainActivity extends Activity {
 	private Button startGsensorActivity;
 	private Button startLightSensorActivity;
 	private Button startProximityActivity;
+	private Button startSortListActivity;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -32,6 +33,7 @@ public class MainActivity extends Activity {
 		startGsensorActivity = (Button) findViewById(R.id.start_gsensor_activity);
 		startLightSensorActivity = (Button) findViewById(R.id.start_light_sensor_activity);
 		startProximityActivity = (Button) findViewById(R.id.start_proximity_sensor_activity);
+		startSortListActivity = (Button) findViewById(R.id.start_sort_list_activity);
 	}
 	
 	private void setOnClickListener() {
@@ -61,6 +63,16 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent myIntent = new Intent(MainActivity.this, com.quinn.myutilapp.StartProximitySensorActivity.class);
+				startActivity(myIntent);
+			}
+		});
+		
+		startSortListActivity.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent myIntent = new Intent(MainActivity.this, com.quinn.sortlistview.MainActivity.class);
 				startActivity(myIntent);
 			}
 		});

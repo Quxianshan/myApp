@@ -16,4 +16,5 @@
 	<!-- start proximity sensor -->	
 	<string name="name_of_start_proximity_sensor_activity">start proximity sensor activity</string>
 	
+	<string name="name_of_sort_list_activity">start sort list view</string>
 </resources>

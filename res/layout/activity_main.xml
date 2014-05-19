@@ -39,4 +39,14 @@
         android:text="@string/name_of_start_proximity_sensor_activity"
         />
     
+    <Button 
+        android:id="@+id/start_sort_list_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/start_proximity_sensor_activity"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="50dp"
+        android:text="@string/name_of_sort_list_activity"
+        />
+    
 </RelativeLayout>

@@ -30,6 +30,10 @@
         <activity android:name="com.quinn.myutilapp.StartGsensorActivity"/>
 		<activity android:name="com.quinn.myutilapp.StartLightSensorActivity"/>        
 		<activity android:name="com.quinn.myutilapp.StartProximitySensorActivity"/>
+		<activity android:name="com.quinn.myutilapp.StartSortListActivity"/>
+		<activity android:name="com.quinn.sortlistview.MainActivity"
+		    android:windowSoftInputMode = "adjustPan"/>
+		
     </application>
 
 </manifest>
